@@ -35,7 +35,7 @@ const createNewUser = asyncHandler(async (req, res) => {
 
     const userData = await decrypt(data);
     const { ad, soyad, email, password } = userData;
-    console.log(userData);
+
     if (!validateEmail(email)) {
       return res.status(409).json({
         message: "email adresi geçerli değillll",
